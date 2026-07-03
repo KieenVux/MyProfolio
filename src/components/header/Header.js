@@ -33,7 +33,7 @@ export default function Header({ theme }) {
       <SeoHeader />
       <div>
         <header className="header">
-          <NavLink to={link}  className="logo">
+          <NavLink to={link} className="logo">
             <span style={{ color: theme.text }}> &lt;</span>
             <span className="logo-name" style={{ color: theme.text }}>
               {greeting.logo_name}
@@ -48,10 +48,16 @@ export default function Header({ theme }) {
             <li>
               <NavLink
                 to="/home"
-                
-                style={({ isActive }) => ({ color: theme.text, fontWeight: isActive ? "bold" : "normal" })}
+                style={({ isActive }) => ({
+                  color: theme.text,
+                  fontWeight: isActive ? "bold" : "normal",
+                })}
                 onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                 onMouseOut={(event) => onMouseOut(event)}
+                onClick={() => {
+                  if (document.getElementById("menu-btn"))
+                    document.getElementById("menu-btn").checked = false;
+                }}
               >
                 {language === "ja" ? "ホーム" : "Home"}
               </NavLink>
@@ -59,10 +65,16 @@ export default function Header({ theme }) {
             <li>
               <NavLink
                 to="/education"
-                
-                style={({ isActive }) => ({ color: theme.text, fontWeight: isActive ? "bold" : "normal" })}
+                style={({ isActive }) => ({
+                  color: theme.text,
+                  fontWeight: isActive ? "bold" : "normal",
+                })}
                 onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                 onMouseOut={(event) => onMouseOut(event)}
+                onClick={() => {
+                  if (document.getElementById("menu-btn"))
+                    document.getElementById("menu-btn").checked = false;
+                }}
               >
                 {language === "ja" ? "学歴" : "Education"}
               </NavLink>
@@ -70,10 +82,16 @@ export default function Header({ theme }) {
             <li>
               <NavLink
                 to="/experience"
-                
-                style={({ isActive }) => ({ color: theme.text, fontWeight: isActive ? "bold" : "normal" })}
+                style={({ isActive }) => ({
+                  color: theme.text,
+                  fontWeight: isActive ? "bold" : "normal",
+                })}
                 onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                 onMouseOut={(event) => onMouseOut(event)}
+                onClick={() => {
+                  if (document.getElementById("menu-btn"))
+                    document.getElementById("menu-btn").checked = false;
+                }}
               >
                 {language === "ja" ? "経歴" : "Experience"}
               </NavLink>
@@ -81,10 +99,16 @@ export default function Header({ theme }) {
             <li>
               <NavLink
                 to="/contact"
-                
-                style={({ isActive }) => ({ color: theme.text, fontWeight: isActive ? "bold" : "normal" })}
+                style={({ isActive }) => ({
+                  color: theme.text,
+                  fontWeight: isActive ? "bold" : "normal",
+                })}
                 onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                 onMouseOut={(event) => onMouseOut(event)}
+                onClick={() => {
+                  if (document.getElementById("menu-btn"))
+                    document.getElementById("menu-btn").checked = false;
+                }}
               >
                 {language === "ja" ? "お問い合わせ" : "Contact Me"}
               </NavLink>

@@ -143,7 +143,7 @@ export const experience = {
             "1人開発者としてゼロから構築した、デザート＆冷凍食品専門のECサイト。",
           projectLinks: {
             website: "https://luana-olu-olu.vercel.app/",
-            userManual: "/LuanaOluOlu-introduction.pdf"
+            userManual: "/LuanaOluOlu-introduction.pdf",
           },
           techStack: [
             "TypeScript",
@@ -243,8 +243,8 @@ export const experience = {
               },
             ],
             images: {
-              functionalMap: `${process.env.PUBLIC_URL}/luana-images/functional_map.png`,
-              erDiagram: `${process.env.PUBLIC_URL}/luana-images/er_diagram.png`,
+              functionalMap: `/luana-images/functional_map.png`,
+              erDiagram: `/luana-images/er_diagram.png`,
             },
           },
         },
@@ -343,8 +343,8 @@ export const experience = {
               },
             ],
             images: {
-              functionalMap: `${process.env.PUBLIC_URL}/internal-app-images/functional_map.png`,
-              erDiagram: `${process.env.PUBLIC_URL}/internal-app-images/er_diagram.png`,
+              functionalMap: `/internal-app-images/functional_map.png`,
+              erDiagram: `/internal-app-images/er_diagram.png`,
             },
           },
         },
@@ -517,8 +517,8 @@ export const experience = {
               },
             ],
             images: {
-              functionalMap: `${process.env.PUBLIC_URL}/dms-images/functional_map.png`,
-              erDiagram: `${process.env.PUBLIC_URL}/dms-images/er_diagram.png`,
+              functionalMap: `/dms-images/functional_map.png`,
+              erDiagram: `/dms-images/er_diagram.png`,
             },
           },
         },
@@ -668,8 +668,8 @@ export const experience = {
               },
             ],
             images: {
-              functionalMap: `${process.env.PUBLIC_URL}/lending-images/functional_map.png`,
-              erDiagram: `${process.env.PUBLIC_URL}/lending-images/er_diagram.png`,
+              functionalMap: `/lending-images/functional_map.png`,
+              erDiagram: `/lending-images/er_diagram.png`,
             },
           },
         },
@@ -786,8 +786,8 @@ export const experience = {
               },
             ],
             images: {
-              functionalMap: `${process.env.PUBLIC_URL}/merritrade-images/functional_map.png`,
-              erDiagram: `${process.env.PUBLIC_URL}/merritrade-images/er_diagram.png`,
+              functionalMap: `/merritrade-images/functional_map.png`,
+              erDiagram: `/merritrade-images/er_diagram.png`,
             },
           },
         },

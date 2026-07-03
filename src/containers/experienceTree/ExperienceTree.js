@@ -157,7 +157,12 @@ function CompanyFolder({ company, theme }) {
         {company.logo_path ? (
           <img
             className="exp-company-logo"
-            src={require(`../../assests/images/${company.logo_path}`)}
+            src={
+              new URL(
+                `../../assests/images/${company.logo_path}`,
+                import.meta.url
+              ).href
+            }
             alt={company.name}
             style={{
               width: "36px",

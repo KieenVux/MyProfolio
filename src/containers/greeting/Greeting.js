@@ -40,10 +40,10 @@ export default function Greeting(props) {
                 />
               </div> */}
               <div className="button-greeting-div">
-                <Button 
-                  text={language === "ja" ? "お問い合わせ" : "Contact me"} 
-                  href="#contact" 
-                  theme={theme} 
+                <Button
+                  text={language === "ja" ? "お問い合わせ" : "Contact me"}
+                  href="#contact"
+                  theme={theme}
                 />
                 <Button
                   text={language === "ja" ? "履歴書を見る" : "See my resume"}
@@ -57,7 +57,12 @@ export default function Greeting(props) {
           <div className="greeting-image-div">
             <img
               alt="Vu Trung Kien"
-              src={require("../../assests/images/animated_ashutosh.png")}
+              src={
+                new URL(
+                  "../../assests/images/animated_ashutosh.png",
+                  import.meta.url
+                ).href
+              }
               style={{
                 width: "100%",
                 maxWidth: "220px",

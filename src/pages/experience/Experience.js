@@ -154,7 +154,21 @@ class Experience extends Component {
           <Fade bottom duration={2000} distance="40px">
             <div className="experience-heading-div">
               <div className="experience-heading-img-div">
-                <img src={require("../../assests/images/experience_illustration.png")} alt="Experience" style={{width: "100%", maxWidth: "500px", borderRadius: "10px", boxShadow: "0 10px 30px -15px rgba(0,0,0,0.3)"}} />
+                <img
+                  src={
+                    new URL(
+                      "../../assests/images/experience_illustration.png",
+                      import.meta.url
+                    ).href
+                  }
+                  alt="Experience"
+                  style={{
+                    width: "100%",
+                    maxWidth: "500px",
+                    borderRadius: "10px",
+                    boxShadow: "0 10px 30px -15px rgba(0,0,0,0.3)",
+                  }}
+                />
               </div>
               <div className="experience-heading-text-div">
                 <h1

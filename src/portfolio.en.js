@@ -144,7 +144,7 @@ export const experience = {
             "E-commerce site for a dessert & frozen-food shop, built from scratch as sole developer.",
           projectLinks: {
             website: "https://luana-olu-olu.vercel.app/",
-            userManual: "/LuanaOluOlu-introduction.pdf"
+            userManual: "/LuanaOluOlu-introduction.pdf",
           },
           techStack: [
             "TypeScript",
@@ -230,17 +230,17 @@ export const experience = {
               },
             ],
             images: {
-              functionalMap: `${process.env.PUBLIC_URL}/luana-images/functional_map.png`,
-              erDiagram: `${process.env.PUBLIC_URL}/luana-images/er_diagram.png`,
+              functionalMap: `/luana-images/functional_map.png`,
+              erDiagram: `/luana-images/er_diagram.png`,
             },
           },
         },
         {
           id: "internal-app",
-          name: "Internal App — 360 Feedback System",
+          name: "Internal App — HR Portal & 360 Feedback",
           duration: "9/2025 - present",
           description:
-            "Feedback & evaluation system for internal employees to provide 360-degree reviews.",
+            "A comprehensive internal platform for distributing company news, policies, and manuals, alongside a robust 360-degree feedback system.",
           techStack: [
             "SvelteKit",
             "NestJS",
@@ -334,8 +334,8 @@ export const experience = {
               },
             ],
             images: {
-              functionalMap: `${process.env.PUBLIC_URL}/internal-app-images/functional_map.png`,
-              erDiagram: `${process.env.PUBLIC_URL}/internal-app-images/er_diagram.png`,
+              functionalMap: `/internal-app-images/functional_map.png`,
+              erDiagram: `/internal-app-images/er_diagram.png`,
             },
           },
         },
@@ -537,8 +537,8 @@ export const experience = {
               },
             ],
             images: {
-              functionalMap: `${process.env.PUBLIC_URL}/dms-images/functional_map.png`,
-              erDiagram: `${process.env.PUBLIC_URL}/dms-images/er_diagram.png`,
+              functionalMap: `/dms-images/functional_map.png`,
+              erDiagram: `/dms-images/er_diagram.png`,
             },
           },
         },
@@ -688,8 +688,8 @@ export const experience = {
               },
             ],
             images: {
-              functionalMap: `${process.env.PUBLIC_URL}/lending-images/functional_map.png`,
-              erDiagram: `${process.env.PUBLIC_URL}/lending-images/er_diagram.png`,
+              functionalMap: `/lending-images/functional_map.png`,
+              erDiagram: `/lending-images/er_diagram.png`,
             },
           },
         },
@@ -805,8 +805,8 @@ export const experience = {
               },
             ],
             images: {
-              functionalMap: `${process.env.PUBLIC_URL}/merritrade-images/functional_map.png`,
-              erDiagram: `${process.env.PUBLIC_URL}/merritrade-images/er_diagram.png`,
+              functionalMap: `/merritrade-images/functional_map.png`,
+              erDiagram: `/merritrade-images/er_diagram.png`,
             },
           },
         },

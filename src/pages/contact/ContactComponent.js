@@ -28,7 +28,12 @@ class Contact extends Component {
             >
               <div className="contact-heading-img-div">
                 <img
-                  src={require(`../../assests/images/${ContactData["profile_image_path"]}`)}
+                  src={
+                    new URL(
+                      `../../assests/images/${ContactData["profile_image_path"]}`,
+                      import.meta.url
+                    ).href
+                  }
                   alt="Vu Trung Kien"
                   style={{
                     width: "100%",
@@ -70,7 +75,7 @@ class Contact extends Component {
             <div className="address-heading-div">
               <div className="contact-heading-img-div">
                 {/* <img
-											src={require(`../../assests/images/${addressSection["avatar_image_path"]}`)}
+											src={new URL(`../../assests/images/${addressSection["avatar_image_path"]}`, import.meta.url).href}
 											alt=""
 										/> */}
                 <AddressImg theme={theme} />

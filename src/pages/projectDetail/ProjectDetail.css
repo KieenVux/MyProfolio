@@ -65,7 +65,8 @@
   align-items: center;
 }
 
-.project-company, .project-duration {
+.project-company,
+.project-duration {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -137,7 +138,7 @@
   padding: 25px;
   border-radius: 12px;
   border: 1px solid;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .extended-card p {
@@ -164,10 +165,9 @@
 }
 
 .project-features .check {
-  color: #0C9D58;
+  color: #0c9d58;
   font-weight: bold;
 }
-
 
 .user-roles-grid {
   display: grid;
@@ -179,7 +179,7 @@
   padding: 20px;
   border-radius: 12px;
   border: 1px solid;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
 .user-role-card h4 {
@@ -216,20 +216,22 @@
   .project-title {
     font-size: 2rem;
   }
-  
+
   .project-section h3 {
     font-size: 1.3rem;
   }
-  
-  .project-responsibilities li, .extended-card p, .project-features li {
+
+  .project-responsibilities li,
+  .extended-card p,
+  .project-features li {
     font-size: 1rem;
   }
-  
+
   .user-roles-grid {
     grid-template-columns: 1fr;
     gap: 15px;
   }
-  
+
   .user-role-card {
     padding: 15px;
   }
@@ -237,7 +239,7 @@
   .api-flow-item {
     padding: 15px;
   }
-  
+
   .extended-card {
     padding: 15px;
     max-width: 100%;
@@ -246,8 +248,29 @@
   pre {
     font-size: 0.8rem !important;
   }
-}
 
+  .image-zoom-modal-content {
+    transform: translateY(-40px);
+  }
+
+  .image-zoom-tools {
+    bottom: 150px;
+    width: 90%;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px 15px;
+  }
+
+  .image-zoom-tools button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .image-zoom-close-btn {
+    top: 5px;
+    right: 15px;
+  }
+}
 
 /* Image Zoom Modal */
 .image-zoom-modal-overlay {
@@ -275,8 +298,8 @@
 
 .image-zoom-close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
   background: none;
   border: none;
   color: white;
@@ -288,7 +311,7 @@
 
 .image-zoom-tools {
   position: absolute;
-  bottom: 20px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -323,4 +346,3 @@
 .clickable-image:hover {
   transform: scale(1.02);
 }
-

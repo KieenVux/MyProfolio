@@ -4,7 +4,7 @@ import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 import { experience } from "../../portfolio.js";
 import { Fade } from "react-awesome-reveal";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import "./ProjectDetail.css";
 
@@ -30,7 +30,7 @@ class ProjectDetail extends Component {
 
   render() {
     const theme = this.props.theme;
-    const { id } = this.props.match.params;
+    const { id } = this.props.params;
 
     // Find the project and its company based on the ID
     let currentProject = null;
@@ -113,7 +113,14 @@ class ProjectDetail extends Component {
                   {currentProject.description}
                 </p>
                 {currentProject.projectLinks && (
-                  <div style={{ display: "flex", gap: "15px", marginTop: "15px", flexWrap: "wrap" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "15px",
+                      marginTop: "15px",
+                      flexWrap: "wrap",
+                    }}
+                  >
                     {currentProject.projectLinks.website && (
                       <a
                         href={currentProject.projectLinks.website}
@@ -128,7 +135,7 @@ class ProjectDetail extends Component {
                           border: `1px solid ${parentCompany.color}`,
                           fontSize: "0.9rem",
                           fontWeight: "500",
-                          display: "inline-block"
+                          display: "inline-block",
                         }}
                       >
                         🌐 Visit Website
@@ -148,7 +155,7 @@ class ProjectDetail extends Component {
                           border: `1px solid ${parentCompany.color}`,
                           fontSize: "0.9rem",
                           fontWeight: "500",
-                          display: "inline-block"
+                          display: "inline-block",
                         }}
                       >
                         📄 User Manual
@@ -257,53 +264,58 @@ class ProjectDetail extends Component {
                     </div>
                   )}
 
-                  {(currentProject.extendedDetails.userRoles || currentProject.extendedDetails.userTypes) && (
+                  {(currentProject.extendedDetails.userRoles ||
+                    currentProject.extendedDetails.userTypes) && (
                     <div className="project-section">
                       <h3 style={{ color: theme.text }}>
                         User Roles & Permissions
                       </h3>
                       <div className="user-roles-grid">
-                        {(currentProject.extendedDetails.userRoles || currentProject.extendedDetails.userTypes).map(
-                          (user, idx) => {
-                            const isString = typeof user === 'string';
-                            return (
-                              <div
-                                key={idx}
-                                className="user-role-card"
-                                style={{
-                                  background: theme.compImgHighlight,
-                                  borderColor: `${parentCompany.color}40`,
-                                }}
-                              >
-                                <h4 style={{ color: parentCompany.color }}>
-                                  {isString ? user : user.role}
-                                </h4>
-                                {!isString && user.details && (
-                                  <ul
-                                    className="project-features"
-                                    style={{ marginTop: "10px" }}
-                                  >
-                                    {user.details.map((detail, dIdx) => (
-                                      <li key={dIdx} style={{ color: theme.text }}>
-                                        <span
-                                          className="bullet"
-                                          style={{
-                                            background: parentCompany.color,
-                                            minWidth: "6px",
-                                            height: "6px",
-                                          }}
-                                        ></span>
-                                        <span style={{ fontSize: "0.95rem" }}>
-                                          {detail}
-                                        </span>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                )}
-                              </div>
-                            );
-                          }
-                        )}
+                        {(
+                          currentProject.extendedDetails.userRoles ||
+                          currentProject.extendedDetails.userTypes
+                        ).map((user, idx) => {
+                          const isString = typeof user === "string";
+                          return (
+                            <div
+                              key={idx}
+                              className="user-role-card"
+                              style={{
+                                background: theme.compImgHighlight,
+                                borderColor: `${parentCompany.color}40`,
+                              }}
+                            >
+                              <h4 style={{ color: parentCompany.color }}>
+                                {isString ? user : user.role}
+                              </h4>
+                              {!isString && user.details && (
+                                <ul
+                                  className="project-features"
+                                  style={{ marginTop: "10px" }}
+                                >
+                                  {user.details.map((detail, dIdx) => (
+                                    <li
+                                      key={dIdx}
+                                      style={{ color: theme.text }}
+                                    >
+                                      <span
+                                        className="bullet"
+                                        style={{
+                                          background: parentCompany.color,
+                                          minWidth: "6px",
+                                          height: "6px",
+                                        }}
+                                      ></span>
+                                      <span style={{ fontSize: "0.95rem" }}>
+                                        {detail}
+                                      </span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+                            </div>
+                          );
+                        })}
                       </div>
                     </div>
                   )}
@@ -343,7 +355,7 @@ class ProjectDetail extends Component {
                       <div className="api-flows-list">
                         {currentProject.extendedDetails.apiFlows.map(
                           (flow, idx) => {
-                            const isString = typeof flow === 'string';
+                            const isString = typeof flow === "string";
                             return (
                               <div
                                 key={idx}
@@ -356,8 +368,8 @@ class ProjectDetail extends Component {
                                 <h4 style={{ color: parentCompany.color }}>
                                   {idx + 1}. {isString ? flow : flow.title}
                                 </h4>
-                                {!isString && (
-                                  Array.isArray(flow.description) ? (
+                                {!isString &&
+                                  (Array.isArray(flow.description) ? (
                                     <ul
                                       style={{
                                         margin: 0,
@@ -368,7 +380,10 @@ class ProjectDetail extends Component {
                                       }}
                                     >
                                       {flow.description.map((descLine, i) => (
-                                        <li key={i} style={{ marginBottom: "6px" }}>
+                                        <li
+                                          key={i}
+                                          style={{ marginBottom: "6px" }}
+                                        >
                                           {descLine}
                                         </li>
                                       ))}
@@ -377,8 +392,7 @@ class ProjectDetail extends Component {
                                     <p style={{ color: theme.text }}>
                                       {flow.description}
                                     </p>
-                                  )
-                                )}
+                                  ))}
                               </div>
                             );
                           }
@@ -395,7 +409,7 @@ class ProjectDetail extends Component {
                       <div className="engineering-challenges-list">
                         {currentProject.extendedDetails.engineeringChallenges.map(
                           (challenge, idx) => {
-                            const isString = typeof challenge === 'string';
+                            const isString = typeof challenge === "string";
                             return (
                               <div
                                 key={idx}
@@ -467,26 +481,75 @@ class ProjectDetail extends Component {
                           )}
                       </div>
                       <div className="engineering-challenges-list">
-                        {Array.isArray(currentProject.extendedDetails.systemArchitecture) ? 
-                          currentProject.extendedDetails.systemArchitecture.map((arch, idx) => (
-                            <div key={idx} className="extended-card challenge-card" style={{ background: theme.compImgHighlight, borderColor: `${parentCompany.color}40`, marginBottom: "15px" }}>
-                              <h4 style={{ color: parentCompany.color, marginTop: 0, marginBottom: "10px", fontSize: "1.15rem" }}>
-                                <span role="img" aria-label="arch">⚙️</span> {arch.title}
-                              </h4>
-                              {Array.isArray(arch.description) ? (
-                                <ul style={{ margin: 0, paddingLeft: '20px', color: theme.text, fontSize: '0.95rem', lineHeight: '1.5' }}>
-                                  {arch.description.map((descLine, i) => (
-                                    <li key={i} style={{ marginBottom: '6px' }}>{descLine}</li>
-                                  ))}
-                                </ul>
-                              ) : (
-                                <p style={{ color: theme.text }}>{arch.description}</p>
-                              )}
-                            </div>
-                          )) 
-                        : (
-                          <div className="extended-card challenge-card" style={{ background: theme.compImgHighlight, borderColor: `${parentCompany.color}40`, marginBottom: "15px" }}>
-                            <p style={{ color: theme.text }}>{currentProject.extendedDetails.systemArchitecture}</p>
+                        {Array.isArray(
+                          currentProject.extendedDetails.systemArchitecture
+                        ) ? (
+                          currentProject.extendedDetails.systemArchitecture.map(
+                            (arch, idx) => (
+                              <div
+                                key={idx}
+                                className="extended-card challenge-card"
+                                style={{
+                                  background: theme.compImgHighlight,
+                                  borderColor: `${parentCompany.color}40`,
+                                  marginBottom: "15px",
+                                }}
+                              >
+                                <h4
+                                  style={{
+                                    color: parentCompany.color,
+                                    marginTop: 0,
+                                    marginBottom: "10px",
+                                    fontSize: "1.15rem",
+                                  }}
+                                >
+                                  <span role="img" aria-label="arch">
+                                    ⚙️
+                                  </span>{" "}
+                                  {arch.title}
+                                </h4>
+                                {Array.isArray(arch.description) ? (
+                                  <ul
+                                    style={{
+                                      margin: 0,
+                                      paddingLeft: "20px",
+                                      color: theme.text,
+                                      fontSize: "0.95rem",
+                                      lineHeight: "1.5",
+                                    }}
+                                  >
+                                    {arch.description.map((descLine, i) => (
+                                      <li
+                                        key={i}
+                                        style={{ marginBottom: "6px" }}
+                                      >
+                                        {descLine}
+                                      </li>
+                                    ))}
+                                  </ul>
+                                ) : (
+                                  <p style={{ color: theme.text }}>
+                                    {arch.description}
+                                  </p>
+                                )}
+                              </div>
+                            )
+                          )
+                        ) : (
+                          <div
+                            className="extended-card challenge-card"
+                            style={{
+                              background: theme.compImgHighlight,
+                              borderColor: `${parentCompany.color}40`,
+                              marginBottom: "15px",
+                            }}
+                          >
+                            <p style={{ color: theme.text }}>
+                              {
+                                currentProject.extendedDetails
+                                  .systemArchitecture
+                              }
+                            </p>
                           </div>
                         )}
                       </div>
@@ -713,4 +776,9 @@ class ProjectDetail extends Component {
   }
 }
 
-export default ProjectDetail;
+const ProjectDetailWrapper = (props) => {
+  const params = useParams();
+  return <ProjectDetail {...props} params={params} />;
+};
+
+export default ProjectDetailWrapper;

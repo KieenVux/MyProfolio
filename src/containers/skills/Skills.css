@@ -50,23 +50,25 @@
   } */
 }
 @media (max-width: 768px) {
+  .skills-header {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
   .skills-heading {
     font-size: 30px;
     text-align: center;
-  }
-  .skills-header {
-    font-size: 30px;
+    margin-top: 0px;
   }
   .greeting-text-p {
     font-size: 16px;
     line-height: normal;
   }
   .skills-main-div {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .skills-text-div {
     margin-left: 0px;
-    margin: 20px;
+    margin: 10px 0;
   }
   .skills-text {
     font-size: 16px;
