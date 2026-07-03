@@ -381,13 +381,13 @@ export const experience = {
           extendedDetails: {
             githubDocs: {
               architecture:
-                "https://github.com/your-username/MyProfolio/tree/main/Finviet/ECODMS/docs/architecture.md",
+                "https://github.com/KieenVux/MyProfolio/blob/main/Finviet/ECODMS/docs/architecture.md",
               erDiagram:
-                "https://github.com/your-username/MyProfolio/tree/main/Finviet/ECODMS/docs/er-diagram.md",
+                "https://github.com/KieenVux/MyProfolio/blob/main/Finviet/ECODMS/docs/er-diagram.md",
               functionalMap:
-                "https://github.com/your-username/MyProfolio/tree/main/Finviet/ECODMS/docs/functional-map.md",
+                "https://github.com/KieenVux/MyProfolio/blob/main/Finviet/ECODMS/docs/functional-map.md",
               apiFlows:
-                "https://github.com/your-username/MyProfolio/tree/main/Finviet/ECODMS/docs/api-flow.md",
+                "https://github.com/KieenVux/MyProfolio/blob/main/Finviet/ECODMS/docs/api-flow.md",
             },
             features: [
               "GPS認証による営業担当者数千人のチェックイン・チェックアウト機能",
@@ -538,17 +538,17 @@ export const experience = {
           ],
           githubDocs: {
             readme:
-              "https://github.com/KienVu/portfolio-docs/blob/main/Lending/README.md",
+              "https://github.com/KieenVux/MyProfolio/blob/main/Finviet/Lending/README.md",
             architecture:
-              "https://github.com/KienVu/portfolio-docs/blob/main/Lending/docs/architecture.md",
+              "https://github.com/KieenVux/MyProfolio/blob/main/Finviet/Lending/docs/architecture.md",
             erDiagram:
-              "https://github.com/KienVu/portfolio-docs/blob/main/Lending/docs/er-diagram.md",
+              "https://github.com/KieenVux/MyProfolio/blob/main/Finviet/Lending/docs/er-diagram.md",
             apiFlow:
-              "https://github.com/KienVu/portfolio-docs/blob/main/Lending/docs/api-flow.md",
+              "https://github.com/KieenVux/MyProfolio/blob/main/Finviet/Lending/docs/api-flow.md",
             features:
-              "https://github.com/KienVu/portfolio-docs/blob/main/Lending/docs/features.md",
+              "https://github.com/KieenVux/MyProfolio/blob/main/Finviet/Lending/docs/features.md",
             functionalMap:
-              "https://github.com/KienVu/portfolio-docs/blob/main/Lending/docs/functional-map.md",
+              "https://github.com/KieenVux/MyProfolio/blob/main/Finviet/Lending/docs/functional-map.md",
           },
           extendedDetails: {
             features: [
@@ -878,15 +878,15 @@ export const experience = {
             },
             githubDocs: {
               architecture:
-                "https://github.com/KienVu/portfolio-docs/blob/main/Lucents/SalesNetwork/docs/architecture.md",
+                "https://github.com/KieenVux/MyProfolio/blob/main/Lucents/SalesNetwork/docs/architecture.md",
               apiFlow:
-                "https://github.com/KienVu/portfolio-docs/blob/main/Lucents/SalesNetwork/docs/api-flow.md",
+                "https://github.com/KieenVux/MyProfolio/blob/main/Lucents/SalesNetwork/docs/api-flow.md",
               erDiagram:
-                "https://github.com/KienVu/portfolio-docs/blob/main/Lucents/SalesNetwork/docs/er-diagram.md",
+                "https://github.com/KieenVux/MyProfolio/blob/main/Lucents/SalesNetwork/docs/er-diagram.md",
               features:
-                "https://github.com/KienVu/portfolio-docs/blob/main/Lucents/SalesNetwork/docs/features.md",
+                "https://github.com/KieenVux/MyProfolio/blob/main/Lucents/SalesNetwork/docs/features.md",
               functionalMap:
-                "https://github.com/KienVu/portfolio-docs/blob/main/Lucents/SalesNetwork/docs/functional-map.md",
+                "https://github.com/KieenVux/MyProfolio/blob/main/Lucents/SalesNetwork/docs/functional-map.md",
             },
             features: [
               "承認ワークフローエンジン: 部署やチームの変更に関する厳格なリクエスト承認ロジック（PENDING -> DONE/REJECTED）を実装し、node-xlsxおよびpdfmakeを使用して大量の給与データのエクスポート機能を実装しました。",

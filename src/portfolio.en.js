@@ -166,11 +166,11 @@ export const experience = {
           ],
           githubDocs: {
             architecture:
-              "https://github.com/KienVu/portfolio-docs/blob/main/luana-oluolu/docs/architecture.md",
+              "https://github.com/KieenVux/MyProfolio/blob/main/luana-oluolu/docs/architecture.md",
             erDiagram:
-              "https://github.com/KienVu/portfolio-docs/blob/main/luana-oluolu/docs/er-diagram.md",
+              "https://github.com/KieenVux/MyProfolio/blob/main/luana-oluolu/docs/er-diagram.md",
             features:
-              "https://github.com/KienVu/portfolio-docs/blob/main/luana-oluolu/docs/features.md",
+              "https://github.com/KieenVux/MyProfolio/blob/main/luana-oluolu/docs/features.md",
           },
           extendedDetails: {
             features: [
@@ -259,11 +259,11 @@ export const experience = {
           ],
           githubDocs: {
             architecture:
-              "https://github.com/KienVu/portfolio-docs/blob/main/internal-app/docs/architecture.md",
+              "https://github.com/KieenVux/MyProfolio/blob/main/internal-app/docs/architecture.md",
             erDiagram:
-              "https://github.com/KienVu/portfolio-docs/blob/main/internal-app/docs/er-diagram.md",
+              "https://github.com/KieenVux/MyProfolio/blob/main/internal-app/docs/er-diagram.md",
             features:
-              "https://github.com/KienVu/portfolio-docs/blob/main/internal-app/docs/features.md",
+              "https://github.com/KieenVux/MyProfolio/blob/main/internal-app/docs/features.md",
           },
           extendedDetails: {
             features: [
@@ -401,13 +401,13 @@ export const experience = {
           extendedDetails: {
             githubDocs: {
               architecture:
-                "https://github.com/your-username/MyProfolio/tree/main/Finviet/ECODMS/docs/architecture.md",
+                "https://github.com/KieenVux/MyProfolio/blob/main/Finviet/ECODMS/docs/architecture.md",
               erDiagram:
-                "https://github.com/your-username/MyProfolio/tree/main/Finviet/ECODMS/docs/er-diagram.md",
+                "https://github.com/KieenVux/MyProfolio/blob/main/Finviet/ECODMS/docs/er-diagram.md",
               functionalMap:
-                "https://github.com/your-username/MyProfolio/tree/main/Finviet/ECODMS/docs/functional-map.md",
+                "https://github.com/KieenVux/MyProfolio/blob/main/Finviet/ECODMS/docs/functional-map.md",
               apiFlows:
-                "https://github.com/your-username/MyProfolio/tree/main/Finviet/ECODMS/docs/api-flow.md",
+                "https://github.com/KieenVux/MyProfolio/blob/main/Finviet/ECODMS/docs/api-flow.md",
             },
             features: [
               "GPS-verified store check-in/check-out for thousands of sales personnel",
@@ -558,17 +558,17 @@ export const experience = {
           ],
           githubDocs: {
             readme:
-              "https://github.com/KienVu/portfolio-docs/blob/main/Lending/README.md",
+              "https://github.com/KieenVux/MyProfolio/blob/main/Finviet/Lending/README.md",
             architecture:
-              "https://github.com/KienVu/portfolio-docs/blob/main/Lending/docs/architecture.md",
+              "https://github.com/KieenVux/MyProfolio/blob/main/Finviet/Lending/docs/architecture.md",
             erDiagram:
-              "https://github.com/KienVu/portfolio-docs/blob/main/Lending/docs/er-diagram.md",
+              "https://github.com/KieenVux/MyProfolio/blob/main/Finviet/Lending/docs/er-diagram.md",
             apiFlow:
-              "https://github.com/KienVu/portfolio-docs/blob/main/Lending/docs/api-flow.md",
+              "https://github.com/KieenVux/MyProfolio/blob/main/Finviet/Lending/docs/api-flow.md",
             features:
-              "https://github.com/KienVu/portfolio-docs/blob/main/Lending/docs/features.md",
+              "https://github.com/KieenVux/MyProfolio/blob/main/Finviet/Lending/docs/features.md",
             functionalMap:
-              "https://github.com/KienVu/portfolio-docs/blob/main/Lending/docs/functional-map.md",
+              "https://github.com/KieenVux/MyProfolio/blob/main/Finviet/Lending/docs/functional-map.md",
           },
           extendedDetails: {
             features: [
@@ -890,22 +890,22 @@ export const experience = {
             "Managed internal notifications",
             "AWS infra & CI/CD management",
           ],
+          githubDocs: {
+            architecture:
+              "https://github.com/KieenVux/MyProfolio/blob/main/Lucents/SalesNetwork/docs/architecture.md",
+            apiFlow:
+              "https://github.com/KieenVux/MyProfolio/blob/main/Lucents/SalesNetwork/docs/api-flow.md",
+            erDiagram:
+              "https://github.com/KieenVux/MyProfolio/blob/main/Lucents/SalesNetwork/docs/er-diagram.md",
+            features:
+              "https://github.com/KieenVux/MyProfolio/blob/main/Lucents/SalesNetwork/docs/features.md",
+            functionalMap:
+              "https://github.com/KieenVux/MyProfolio/blob/main/Lucents/SalesNetwork/docs/functional-map.md",
+          },
           extendedDetails: {
             images: {
               erDiagram: "/salesnetwork-images/er_diagram.png",
               functionalMap: "/salesnetwork-images/functional_map.png",
-            },
-            githubDocs: {
-              architecture:
-                "https://github.com/KienVu/portfolio-docs/blob/main/Lucents/SalesNetwork/docs/architecture.md",
-              apiFlow:
-                "https://github.com/KienVu/portfolio-docs/blob/main/Lucents/SalesNetwork/docs/api-flow.md",
-              erDiagram:
-                "https://github.com/KienVu/portfolio-docs/blob/main/Lucents/SalesNetwork/docs/er-diagram.md",
-              features:
-                "https://github.com/KienVu/portfolio-docs/blob/main/Lucents/SalesNetwork/docs/features.md",
-              functionalMap:
-                "https://github.com/KienVu/portfolio-docs/blob/main/Lucents/SalesNetwork/docs/functional-map.md",
             },
             features: [
               "Approval Workflow Engine: Handled strict Request-Approve logic (PENDING -> DONE/REJECTED) for department/team changes and implemented heavy payroll data exports using node-xlsx and pdfmake.",
