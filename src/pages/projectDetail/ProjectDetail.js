@@ -3,7 +3,7 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 import { experience } from "../../portfolio.js";
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import "./ProjectDetail.css";

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Contact from "../pages/contact/ContactComponent";
 import Education from "../pages/education/EducationComponent";
 import Error404 from "../pages/errors/error404/Error";
@@ -15,56 +15,42 @@ export default class Main extends Component {
       return (
         <div>
           <HashRouter basename="/">
-            <Switch>
+            <Routes>
               <Route
                 path="/"
-                exact
-                render={(props) => (
-                  <Splash {...props} theme={this.props.theme} />
-                )}
+                
+                element={<Splash theme={this.props.theme} />}
               />
               <Route
                 path="/home"
-                render={(props) => <Home {...props} theme={this.props.theme} />}
+                element={<Home theme={this.props.theme} />}
               />
               <Route
                 path="/experience"
-                exact
-                render={(props) => (
-                  <Experience {...props} theme={this.props.theme} />
-                )}
+                
+                element={<Experience theme={this.props.theme} />}
               />
               <Route
                 path="/education"
-                render={(props) => (
-                  <Education {...props} theme={this.props.theme} />
-                )}
+                element={<Education theme={this.props.theme} />}
               />
               <Route
                 path="/contact"
-                render={(props) => (
-                  <Contact {...props} theme={this.props.theme} />
-                )}
+                element={<Contact theme={this.props.theme} />}
               />
               <Route
                 path="/experience/project/:id"
-                render={(props) => (
-                  <ProjectDetail {...props} theme={this.props.theme} />
-                )}
+                element={<ProjectDetail theme={this.props.theme} />}
               />
               <Route
                 path="/splash"
-                render={(props) => (
-                  <Splash {...props} theme={this.props.theme} />
-                )}
+                element={<Splash theme={this.props.theme} />}
               />
               <Route
                 path="*"
-                render={(props) => (
-                  <Error404 {...props} theme={this.props.theme} />
-                )}
+                element={<Error404 theme={this.props.theme} />}
               />
-            </Switch>
+            </Routes>
           </HashRouter>
         </div>
       );
@@ -72,42 +58,34 @@ export default class Main extends Component {
       return (
         <div>
           <HashRouter basename="/">
-            <Switch>
+            <Routes>
               <Route
                 path="/"
-                exact
-                render={(props) => <Home {...props} theme={this.props.theme} />}
+                
+                element={<Home theme={this.props.theme} />}
               />
               <Route
                 path="/home"
-                render={(props) => <Home {...props} theme={this.props.theme} />}
+                element={<Home theme={this.props.theme} />}
               />
               <Route
                 path="/experience"
-                exact
-                render={(props) => (
-                  <Experience {...props} theme={this.props.theme} />
-                )}
+                
+                element={<Experience theme={this.props.theme} />}
               />
               <Route
                 path="/education"
-                render={(props) => (
-                  <Education {...props} theme={this.props.theme} />
-                )}
+                element={<Education theme={this.props.theme} />}
               />
               <Route
                 path="/contact"
-                render={(props) => (
-                  <Contact {...props} theme={this.props.theme} />
-                )}
+                element={<Contact theme={this.props.theme} />}
               />
               <Route
                 path="/experience/project/:id"
-                render={(props) => (
-                  <ProjectDetail {...props} theme={this.props.theme} />
-                )}
+                element={<ProjectDetail theme={this.props.theme} />}
               />
-            </Switch>
+            </Routes>
           </HashRouter>
         </div>
       );

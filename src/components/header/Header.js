@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./Header.css";
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 import { NavLink, Link } from "react-router-dom";
 import SeoHeader from "../seoHeader/SeoHeader";
 import { ThemeContext } from "../../contexts/ThemeContext";
@@ -33,7 +33,7 @@ export default function Header({ theme }) {
       <SeoHeader />
       <div>
         <header className="header">
-          <NavLink to={link} tag={Link} className="logo">
+          <NavLink to={link}  className="logo">
             <span style={{ color: theme.text }}> &lt;</span>
             <span className="logo-name" style={{ color: theme.text }}>
               {greeting.logo_name}
@@ -48,9 +48,8 @@ export default function Header({ theme }) {
             <li>
               <NavLink
                 to="/home"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ color: theme.text }}
+                
+                style={({ isActive }) => ({ color: theme.text, fontWeight: isActive ? "bold" : "normal" })}
                 onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                 onMouseOut={(event) => onMouseOut(event)}
               >
@@ -60,9 +59,8 @@ export default function Header({ theme }) {
             <li>
               <NavLink
                 to="/education"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ color: theme.text }}
+                
+                style={({ isActive }) => ({ color: theme.text, fontWeight: isActive ? "bold" : "normal" })}
                 onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                 onMouseOut={(event) => onMouseOut(event)}
               >
@@ -72,9 +70,8 @@ export default function Header({ theme }) {
             <li>
               <NavLink
                 to="/experience"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ color: theme.text }}
+                
+                style={({ isActive }) => ({ color: theme.text, fontWeight: isActive ? "bold" : "normal" })}
                 onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                 onMouseOut={(event) => onMouseOut(event)}
               >
@@ -84,9 +81,8 @@ export default function Header({ theme }) {
             <li>
               <NavLink
                 to="/contact"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ color: theme.text }}
+                
+                style={({ isActive }) => ({ color: theme.text, fontWeight: isActive ? "bold" : "normal" })}
                 onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                 onMouseOut={(event) => onMouseOut(event)}
               >

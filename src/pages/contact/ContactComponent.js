@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 import Button from "../../components/button/Button";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
