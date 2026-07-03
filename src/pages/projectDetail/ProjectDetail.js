@@ -224,7 +224,36 @@ class ProjectDetail extends Component {
 
                   {currentProject.extendedDetails.features && (
                     <div className="project-section">
-                      <h3 style={{ color: theme.text }}>Core Features</h3>
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "baseline",
+                          flexWrap: "wrap",
+                        }}
+                      >
+                        <h3 style={{ color: theme.text }}>Core Features</h3>
+                        {currentProject.extendedDetails.githubDocs &&
+                          currentProject.extendedDetails.githubDocs
+                            .features && (
+                            <a
+                              href={
+                                currentProject.extendedDetails.githubDocs
+                                  .features
+                              }
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{
+                                color: theme.text,
+                                opacity: 0.7,
+                                textDecoration: "underline",
+                                fontSize: "0.9rem",
+                              }}
+                            >
+                              View Details on GitHub ↗
+                            </a>
+                          )}
+                      </div>
                       <div
                         className="extended-card"
                         style={{
