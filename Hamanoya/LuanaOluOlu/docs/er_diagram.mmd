@@ -1,0 +1,52 @@
+erDiagram
+    users {
+        string id PK
+        string line_id UK
+        string email UK
+        string name
+        string role "ADMIN or CUSTOMER"
+        string phone
+        date created_at
+    }
+    categories {
+        string id PK
+        string name
+        string description
+    }
+    products {
+        string id PK
+        string category_id FK
+        string name
+        string description
+        int price
+        int stock
+        jsonb images
+    }
+    orders {
+        string id PK
+        string user_id FK
+        int total_amount
+        string status "PENDING, PAID, SHIPPED, CANCELLED"
+        string payment_id FK
+        date created_at
+    }
+    order_items {
+        string id PK
+        string order_id FK
+        string product_id FK
+        int quantity
+        int price_at_purchase
+    }
+    payments {
+        string id PK
+        string order_id FK
+        string fincode_transaction_id UK
+        string status "AUTHORIZED, CAPTURED, FAILED"
+        int amount
+    }
+
+    users ||--o{ orders : "places (1:N)"
+    categories ||--o{ products : "contains (1:N)"
+    orders ||--o{ order_items : "has (1:N)"
+    products ||--o{ order_items : "included in (1:N)"
+    orders ||--|| payments : "paid via (1:1)"

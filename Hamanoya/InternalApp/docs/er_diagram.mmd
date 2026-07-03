@@ -1,0 +1,57 @@
+erDiagram
+    users {
+        string id PK
+        int code UK
+        string type
+        string department
+        string name
+        string role
+        string status
+    }
+    categories {
+        string id PK
+        string name
+    }
+    posts {
+        string id PK
+        string title
+        string subtitle
+        text content
+        jsonb images
+        jsonb files
+        string type
+        string categoryId FK
+        string status
+    }
+    documents {
+        string id PK
+        string title
+        string subtitle
+        text content
+        jsonb images
+        jsonb files
+        string type
+        string categoryId FK
+        string status
+    }
+    opinions {
+        string id PK
+        string title
+        text content
+        jsonb images
+        jsonb files
+        boolean isSeen
+        boolean isAnonymus
+        string categoryId FK
+        string createdById FK
+    }
+    notifications {
+        string id PK
+        string title
+        text content
+    }
+
+    categories ||--o{ posts : "has (1:N)"
+    categories ||--o{ documents : "has (1:N)"
+    categories ||--o{ opinions : "categorizes (1:N)"
+    users ||--o{ opinions : "submits (1:N)"

@@ -1,0 +1,251 @@
+/* ── Tree wrapper ── */
+.exp-tree {
+  padding: 40px 60px;
+  font-family: "Google Sans Regular", sans-serif;
+}
+
+/* ── Company (folder) row ── */
+.exp-company {
+  margin-bottom: 28px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  transition: box-shadow 0.2s;
+}
+.exp-company:hover {
+  box-shadow: 0 4px 28px rgba(0,0,0,0.13);
+}
+
+.exp-company-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s;
+  border-left: 4px solid transparent;
+}
+.exp-company-header:hover {
+  filter: brightness(1.06);
+}
+
+.exp-company-chevron {
+  font-size: 11px;
+  transition: transform 0.22s ease;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+.exp-company-chevron.open {
+  transform: rotate(90deg);
+}
+
+.exp-company-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.exp-company-info {
+  flex: 1;
+  min-width: 0;
+}
+.exp-company-name {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.exp-company-meta {
+  display: flex;
+  gap: 12px;
+  margin-top: 2px;
+  flex-wrap: wrap;
+}
+.exp-company-role {
+  font-size: 13px;
+  opacity: 0.75;
+}
+.exp-company-duration {
+  font-size: 12px;
+  opacity: 0.6;
+  background: rgba(255,255,255,0.15);
+  padding: 1px 8px;
+  border-radius: 20px;
+}
+
+.exp-project-count {
+  font-size: 11px;
+  opacity: 0.5;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* ── Projects list (collapsible) ── */
+.exp-projects-list {
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+/* ── Project (file) row ── */
+.exp-project-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+.exp-project-item:last-child {
+  border-bottom: none;
+}
+
+/* tree indent lines */
+.exp-tree-indent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 36px;
+  flex-shrink: 0;
+  padding-top: 18px;
+}
+.exp-tree-line-v {
+  width: 1px;
+  background: rgba(128,128,128,0.25);
+  flex: 1;
+  min-height: 100%;
+}
+.exp-tree-line-h {
+  width: 16px;
+  height: 1px;
+  background: rgba(128,128,128,0.25);
+  margin-top: 0;
+}
+
+.exp-project-trigger {
+  flex: 1;
+  cursor: pointer;
+  padding: 14px 20px 14px 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.12s;
+  border-radius: 0 0 0 0;
+}
+.exp-project-trigger:hover {
+  background: rgba(128,128,128,0.06);
+}
+
+.exp-project-icon {
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.exp-project-name {
+  font-size: 14px;
+  font-weight: 600;
+  flex: 1;
+}
+.exp-project-duration-badge {
+  font-size: 11px;
+  opacity: 0.55;
+  white-space: nowrap;
+}
+.exp-project-chevron {
+  font-size: 10px;
+  opacity: 0.5;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.exp-project-chevron.open {
+  transform: rotate(90deg);
+}
+
+/* ── Project detail panel ── */
+.exp-project-detail {
+  padding: 0 24px 20px 60px;
+  animation: fadeSlideDown 0.2s ease;
+}
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Description */
+.exp-detail-description {
+  font-size: 13.5px;
+  line-height: 1.65;
+  opacity: 0.82;
+  margin-bottom: 14px;
+  padding: 10px 14px;
+  border-left: 3px solid rgba(128,128,128,0.25);
+  border-radius: 0 6px 6px 0;
+}
+
+/* Tech stack */
+.exp-detail-section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 8px;
+}
+.exp-tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.exp-tech-chip {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid currentColor;
+  opacity: 0.8;
+  transition: opacity 0.15s;
+}
+.exp-tech-chip:hover {
+  opacity: 1;
+}
+
+/* Responsibilities */
+.exp-responsibilities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.exp-responsibility-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.exp-responsibility-bullet {
+  margin-top: 4px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .exp-tree {
+    padding: 20px 16px;
+  }
+  .exp-project-detail {
+    padding: 0 14px 16px 44px;
+  }
+  .exp-company-name {
+    font-size: 14px;
+  }
+  .exp-project-name {
+    font-size: 13px;
+  }
+  .exp-project-duration-badge {
+    display: none;
+  }
+}

@@ -1,0 +1,74 @@
+erDiagram
+    users {
+        string id PK
+        string email UK
+        boolean is_banned
+        string ekyc_status "PENDING, VERIFIED, REJECTED"
+        date created_at
+    }
+    user_identities {
+        string id PK
+        string user_id FK
+        string full_name
+        string id_number UK
+        date dob
+        string front_image_url
+    }
+    tournaments {
+        string id PK
+        string name
+        date start_time
+        date end_time
+        string status "UPCOMING, ACTIVE, ENDED"
+        jsonb ranking_criteria
+    }
+    currency_pairs {
+        string id PK
+        string symbol "e.g., EUR/USD"
+        decimal current_rate
+    }
+    orders {
+        string id PK
+        string user_id FK
+        string tournament_id FK
+        string currency_pair_id FK
+        string type "FOREX, BINARY"
+        string status "OPEN, CLOSED, FORCE_CLOSED"
+        decimal amount
+        decimal open_price
+        decimal close_price
+        decimal pnl
+    }
+    ranking_boards {
+        string id PK
+        string tournament_id FK
+        string user_id FK
+        decimal total_pnl
+        int rank_position
+    }
+    export_history {
+        string id PK
+        string requested_by_user_id FK
+        string tournament_id FK
+        string file_type "EXCEL, CSV"
+        string s3_url
+        string status "PROCESSING, COMPLETED"
+    }
+    complaints {
+        string id PK
+        string user_id FK
+        string tournament_id FK
+        text content
+        string status "PENDING, RESOLVED"
+    }
+
+    users ||--|| user_identities : "verifies (1:1)"
+    users ||--o{ orders : "places (1:N)"
+    tournaments ||--o{ orders : "contains (1:N)"
+    currency_pairs ||--o{ orders : "traded in (1:N)"
+    users ||--o{ ranking_boards : "ranked in (1:N)"
+    tournaments ||--o{ ranking_boards : "has rankings (1:N)"
+    users ||--o{ export_history : "requests (1:N)"
+    tournaments ||--o{ export_history : "data from (1:N)"
+    users ||--o{ complaints : "submits (1:N)"
+    tournaments ||--o{ complaints : "subject of (1:N)"

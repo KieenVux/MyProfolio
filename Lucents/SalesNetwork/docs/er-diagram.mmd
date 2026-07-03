@@ -1,0 +1,51 @@
+erDiagram
+    USERS {
+        string id PK
+        string keycloak_id
+        string role
+        string name
+        int office_id FK
+        int team_id FK
+    }
+
+    OFFICES {
+        int id PK
+        string name
+        string region
+    }
+
+    TEAMS {
+        int id PK
+        int office_id FK
+        string name
+    }
+
+    REQUESTS {
+        string id PK
+        string issuer_id FK
+        string type "EARLY_SALARY, CHANGE_TEAM, CHANGE_OFFICE"
+        string status "PENDING, DONE, REJECTED"
+        string reason
+    }
+
+    BONUS_PENALTIES {
+        string id PK
+        string user_id FK
+        decimal amount
+        string type "BONUS, PENALTY"
+        string source "cron_update_bonus"
+    }
+
+    PAYMENT_TRANSACTIONS {
+        string id PK
+        string user_id FK
+        decimal amount
+        string gateway "9PAY"
+        string status "PROCESSING, SUCCESS, FAILED"
+    }
+
+    OFFICES ||--o{ TEAMS : "contains"
+    TEAMS ||--o{ USERS : "has members"
+    USERS ||--o{ REQUESTS : "submits"
+    USERS ||--o{ BONUS_PENALTIES : "receives"
+    USERS ||--o{ PAYMENT_TRANSACTIONS : "initiates"

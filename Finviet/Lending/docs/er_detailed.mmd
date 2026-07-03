@@ -1,0 +1,124 @@
+erDiagram
+    %% LOAN PRODUCT SERVICE
+    finance_product {
+        int id PK
+        string code
+        string status
+        string name
+        date created_at
+    }
+    finance_product_fee {
+        int id PK
+        int finance_product_id FK
+        int fee_id FK
+        string status
+    }
+    document_set {
+        int id PK
+        string code
+        string description
+    }
+    finance_product_document {
+        int id PK
+        int finance_product_id FK
+        int document_set_id FK
+    }
+    whitelist {
+        int id PK
+        string customer_phone UK
+        int finance_product_id FK
+        boolean is_eligible
+    }
+
+    finance_product ||--o{ finance_product_fee : "configures (1:N)"
+    finance_product ||--o{ finance_product_document : "requires (1:N)"
+    document_set ||--o{ finance_product_document : "comprises (1:N)"
+    finance_product ||--o{ whitelist : "allows (1:N)"
+
+    %% DYNAMIC FORM SERVICE
+    form {
+        int id PK
+        string name
+        string description
+        date created_at
+    }
+    form_submit_value {
+        int id PK
+        int form_id FK
+        string customer_phone
+        jsonb value
+        boolean is_submit
+    }
+
+    form ||--o{ form_submit_value : "collects (1:N)"
+
+    %% LOAN APPLICATION SERVICE
+    loan_application {
+        int id PK
+        string code
+        int finance_product_id FK
+        int form_submit_value_id FK
+        int customer_id
+        string status
+    }
+    application_profile {
+        int id PK
+        int loan_application_id FK
+        jsonb customer_data
+    }
+    application_documents {
+        int id PK
+        int application_id FK
+        string document_link
+    }
+    application_eKYC {
+        int id PK
+        int application_id FK
+        jsonb eKYC_data
+    }
+
+    loan_application ||--|| application_profile : "has profile (1:1)"
+    loan_application ||--o{ application_documents : "includes docs (1:N)"
+    loan_application ||--|| application_eKYC : "verifies with (1:1)"
+    finance_product ||--o{ loan_application : "generates (1:N)"
+    form_submit_value ||--|| loan_application : "initiates (1:1)"
+
+    %% LOAN TRANSACTION SERVICE
+    payment_transactions {
+        int id PK
+        string code
+        numeric amount
+        string status
+        int loan_application_id FK
+    }
+    transaction_detail {
+        int id PK
+        int transaction_id FK
+        numeric order_amount
+        numeric user_fee_snapshot
+    }
+    bill {
+        int id PK
+        int loan_application_id FK
+        numeric debt_amount
+        numeric min_pay_amount
+        string status
+    }
+    repayment_transactions {
+        int id PK
+        int bill_id FK
+        string code
+        numeric amount
+        string status
+    }
+    partner_log {
+        int id PK
+        string url
+        jsonb payload
+        jsonb response_data
+    }
+
+    loan_application ||--o{ payment_transactions : "creates purchase (1:N)"
+    loan_application ||--o{ bill : "generates bill (1:N)"
+    payment_transactions ||--o{ transaction_detail : "detailed by (1:N)"
+    bill ||--o{ repayment_transactions : "paid via (1:N)"

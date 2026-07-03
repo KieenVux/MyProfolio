@@ -1,0 +1,12 @@
+# Feature List & Technical Implementation
+
+## Core Features Developed
+
+| Feature | Description | Tech Used | My Contribution |
+|---|---|---|---|
+| **Automated Tournament Lifecycle** | The absolute core of the competitive trading platform. Tournaments follow a strict timeline from creation, marketing, execution, to final ranking. | NestJS, `node-cron`, PostgreSQL | Architected the `cron-tournament-end` microservice. Wrote the highly complex logic to force-close active user orders precisely at the exact exchange rate the second the tournament ends, followed by instant recalculation of the ranking boards. |
+| **eKYC Identity Verification** | Automated onboarding flow where users upload their Identity Cards, allowing the system to extract their data instantly. | NestJS (`national-card`), OCR APIs | Integrated the OCR scanning pipeline, ensuring uploaded images are securely processed, data is extracted, and the user's `ekyc_status` is updated without Admin intervention. |
+| **Heavy Data Export Engine** | Admins and Users need to export massive Excel/CSV files of their order histories or tournament rankings. | NestJS (`export`), AWS S3 | Developed an asynchronous worker queue that aggregates thousands of database rows, generates the file, and streams it to AWS S3, returning a signed URL to prevent blocking the main Node.js event loop. |
+| **Dual-Web React Applications** | A separation of concerns between the User's Trading Web (charts, orders, complaints) and the Admin Portal (CRUD tournaments, manage users). | ReactJS, Hasura (GraphQL) | Integrated the frontend UI (20% of my role) based on design specs. Hooked up the React components directly to the Hasura GraphQL engine for rapid data fetching and the NestJS REST APIs for complex mutations. |
+| **Real-time Ban & Kick System** | Admins can instantly ban suspicious users from the platform. | Socket.io, Redis, NestJS | Implemented the real-time kick feature. When an Admin updates a user's `is_banned` status in the DB, a Redis Pub/Sub event forces the Socket.io server to instantly disconnect the user's active trading session. |
+| **DevOps & AWS CI/CD** | Robust cloud infrastructure ensuring high availability for the microservices. | AWS, Docker, GitHub Actions | Managed 10% of the DevOps workload. Handled the deployment pipelines via CodePipeline, built Docker images via CodeBuild, and managed storage on S3 and RDS. |
