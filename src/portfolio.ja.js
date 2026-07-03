@@ -140,7 +140,11 @@ export const experience = {
           name: "Luana'olu'olu — ECサイト",
           duration: "2025年9月 - 2025年12月",
           description:
-            "デザート・冷凍食品販売ショップ向けECサイトをゼロから単独で構築。",
+            "1人開発者としてゼロから構築した、デザート＆冷凍食品専門のECサイト。",
+          projectLinks: {
+            website: "https://luana-olu-olu.vercel.app/",
+            userManual: "/LuanaOluOlu-introduction.pdf"
+          },
           techStack: [
             "TypeScript",
             "NestJS",

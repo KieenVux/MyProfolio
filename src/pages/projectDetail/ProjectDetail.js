@@ -112,6 +112,50 @@ class ProjectDetail extends Component {
                 <p style={{ color: theme.secondaryText, lineHeight: "1.6" }}>
                   {currentProject.description}
                 </p>
+                {currentProject.projectLinks && (
+                  <div style={{ display: "flex", gap: "15px", marginTop: "15px", flexWrap: "wrap" }}>
+                    {currentProject.projectLinks.website && (
+                      <a
+                        href={currentProject.projectLinks.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          padding: "8px 16px",
+                          textDecoration: "none",
+                          color: theme.text,
+                          backgroundColor: `${parentCompany.color}20`,
+                          borderRadius: "5px",
+                          border: `1px solid ${parentCompany.color}`,
+                          fontSize: "0.9rem",
+                          fontWeight: "500",
+                          display: "inline-block"
+                        }}
+                      >
+                        🌐 Visit Website
+                      </a>
+                    )}
+                    {currentProject.projectLinks.userManual && (
+                      <a
+                        href={currentProject.projectLinks.userManual}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          padding: "8px 16px",
+                          textDecoration: "none",
+                          color: theme.text,
+                          backgroundColor: `${parentCompany.color}20`,
+                          borderRadius: "5px",
+                          border: `1px solid ${parentCompany.color}`,
+                          fontSize: "0.9rem",
+                          fontWeight: "500",
+                          display: "inline-block"
+                        }}
+                      >
+                        📄 User Manual
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
 
               <div className="project-section">

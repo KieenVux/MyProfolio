@@ -142,6 +142,10 @@ export const experience = {
           duration: "9/2025 - 12/2025",
           description:
             "E-commerce site for a dessert & frozen-food shop, built from scratch as sole developer.",
+          projectLinks: {
+            website: "https://luana-olu-olu.vercel.app/",
+            userManual: "/LuanaOluOlu-introduction.pdf"
+          },
           techStack: [
             "TypeScript",
             "NestJS",
