@@ -969,7 +969,8 @@ export const contactPageData = {
     title: "Address",
     subtitle: "3-14-13 Nakoji, Amagasaki, Hyogo 661-0974",
     avatar_image_path: "address_image.svg",
-    location_map_link: "",
+    location_map_link:
+      "https://www.google.com/maps/search/?api=1&query=3-14-13+Nakoji,+Amagasaki,+Hyogo+661-0974",
   },
   phoneSection: {
     title: "Phone Number",

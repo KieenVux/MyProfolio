@@ -978,7 +978,8 @@ export const contactPageData = {
     title: "住所",
     subtitle: "661-0974 兵庫県尼崎市若王寺3丁目14番13",
     avatar_image_path: "address_image.svg",
-    location_map_link: "",
+    location_map_link:
+      "https://www.google.com/maps/search/?api=1&query=兵庫県尼崎市若王寺3丁目14番13",
   },
   phoneSection: {
     title: "電話番号",
